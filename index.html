@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>temp conversion</title>
+</head>
+
+<body>
+  <h2>convert between different temperature scales</h2>
+  <h3>select conversion</h3>
+  <!-- <form> -->
+  <input type="radio" name="conType" value="FC"> ºF to ºC <br>
+  <input type="radio" name="conType" value="CF"> ºC to ºF <br>
+  <br>
+  <h4>temperature?</h4>
+  <input id="tempIn" type="number" name="tempIn">
+  <br>
+  <br>
+  <button onclick="convert()">Convert</button>
+  <h4>is equivilant to</h4>
+  <span id="tempOut"></span>
+
+  <!-- </form> -->
+
+  <script>
+    function convert() {
+      let tempIn = document.getElementById("tempIn").value;
+      console.log(tempIn);
+      let tempConv = Math.round((tempIn - 32) / 9 * 5);
+      let tempOut = document.getElementById("tempOut");
+      tempOut.innerText = tempConv
+    };
+  </script>
+</body>
+
+</html>
