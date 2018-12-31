@@ -11,9 +11,20 @@
 <body>
   <h2>convert between different temperature scales</h2>
   <h3>select conversion</h3>
-  <!-- <form> -->
-  <input type="radio" name="conType" value="FC"> ºF to ºC <br>
-  <input type="radio" name="conType" value="CF"> ºC to ºF <br>
+
+  <!-- <input type="radio" name="conType" value="FC"> ºF to ºC <br>
+  <input type="radio" name="conType" value="CF"> ºC to ºF <br> -->
+
+  convert from
+  <select>
+    <option value="F">ºF</option>
+    <option value="C">ºC</option>
+  </select>
+  to
+  <select>
+    <option value="C">ºC</option>
+    <option value="F">ºF</option>
+  </select>
   <br>
   <h4>temperature?</h4>
   <input id="tempIn" type="number" name="tempIn">
@@ -23,7 +34,7 @@
   <h4>is equivilant to</h4>
   <span id="tempOut"></span>
 
-  <!-- </form> -->
+
 
   <script src="./convert.js"></script>
 
