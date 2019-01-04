@@ -13,30 +13,30 @@
 <body>
   <h2>convert between different temperature scales</h2>
   <h3>select conversion</h3>
-
-  <!-- <input type="radio" name="conType" value="FC"> ºF to ºC <br>
-  <input type="radio" name="conType" value="CF"> ºC to ºF <br> -->
-
-  convert from
-  <select id="selIn">
-    <option value="F">ºF</option>
-    <option value="C">ºC</option>
-  </select>
-  to
-  <select id="selOut">
-    <option value="C">ºC</option>
-    <option value="F">ºF</option>
-  </select>
-  <br>
-  <h4>temperature?</h4>
-  <input id="tempIn" type="number" name="tempIn"> <span id="inScale"></span>
-  <br>
-  <br>
-  <button onclick="convert()">Convert</button>
-  <h4>is equivalent to</h4>
-  <span id="tempOut"></span> <span id="outScale"></span>
-
-
+  <div id="setScale">
+    convert from
+    <select id="selIn">
+      <option value="F">ºF</option>
+      <option value="C">ºC</option>
+    </select>
+    to
+    <select id="selOut">
+      <option value="C">ºC</option>
+      <option value="F">ºF</option>
+    </select>
+    <br>
+  </div>
+  <div id="input">
+    <h4>temperature?</h4>
+    <input id="tempIn" type="number" name="tempIn"> <span id="inScale"></span>
+    <br>
+    <br>
+  </div>
+  <div id="output">
+    <button onclick="convert()">Convert</button>
+    <h4>is equivalent to</h4>
+    <span id="tempOut"></span> <span id="outScale"></span>
+  </div>
 
   <script src="./convert.js"></script>
 
