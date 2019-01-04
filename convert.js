@@ -1,3 +1,11 @@
+let selIn = document.getElementById("selIn");
+let selOut = document.getElementById("selOut");
+let inScale = document.getElementById("inScale");
+let outScale = document.getElementById("outScale");
+
+inScale.innerText = selIn.value + "º"
+outScale.innerText = selOut.value + "º"
+
 function convert() {
   let tempIn = document.getElementById("tempIn").value;
   // console.log(tempIn);

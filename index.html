@@ -18,23 +18,23 @@
   <input type="radio" name="conType" value="CF"> ºC to ºF <br> -->
 
   convert from
-  <select>
+  <select id="selIn">
     <option value="F">ºF</option>
     <option value="C">ºC</option>
   </select>
   to
-  <select>
+  <select id="selOut">
     <option value="C">ºC</option>
     <option value="F">ºF</option>
   </select>
   <br>
   <h4>temperature?</h4>
-  <input id="tempIn" type="number" name="tempIn">
+  <input id="tempIn" type="number" name="tempIn"> <span id="inScale"></span>
   <br>
   <br>
   <button onclick="convert()">Convert</button>
   <h4>is equivilant to</h4>
-  <span id="tempOut"></span>
+  <span id="tempOut"></span> <span id="outScale"></span>
 
 
 
