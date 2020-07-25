@@ -1,20 +1,39 @@
-let selIn = document.getElementById("selIn");
-let selOut = document.getElementById("selOut");
-let inScale = document.getElementById("inScale");
-let outScale = document.getElementById("outScale");
+const selIn = document.getElementById('selIn');
+const selOut = document.getElementById('selOut');
+const inScale = document.getElementById('inScale');
+const outScale = document.getElementById('outScale');
 
-inScale.innerText = selIn.value + "º"
+inScale.innerText = `${selIn.value}º`;
 
 function convert() {
-  let tempConv;
-  inScale.innerText = selIn.value + "º"
-  let tempIn = document.getElementById("tempIn").value;
-  if (selIn.value == "F") {
-    tempConv = Math.round((tempIn - 32) / 9 * 5);
-  } else {
-    tempConv = Math.round(tempIn / 5 * 9 + 32);
-  }
-  let tempOut = document.getElementById("tempOut");
-  tempOut.innerText = tempConv
-  outScale.innerText = selOut.value + "º"
+    const tempIn = document.getElementById('tempIn').value;
+    if (!tempIn) {
+        console.log('no temp input - returning');
+        return;
+    }
+    let tempConv;
+    inScale.innerText = `${selIn.value}º`;
+    if (selIn.value == 'F') {
+        tempConv = Math.round(((tempIn - 32) / 9) * 5);
+    } else {
+        tempConv = Math.round((tempIn / 5) * 9 + 32);
+    }
+    const tempOut = document.getElementById('tempOut');
+    tempOut.innerText = tempConv;
+    outScale.innerText = `${selOut.value}º`;
 }
+
+// process user changes to temp scales
+selIn.addEventListener('change', () => {
+    console.log('selIn change');
+    selOut.value = selIn.value == 'F' ? 'C' : 'F';
+    inScale.innerText = `${selIn.value}º`;
+    convert();
+});
+
+selOut.addEventListener('change', () => {
+    console.log('selOut change');
+    selIn.value = selOut.value == 'F' ? 'C' : 'F';
+    inScale.innerText = `${selIn.value}º`;
+    convert();
+});

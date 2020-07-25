@@ -1,29 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-  background-color: #DFDBE5;
+  background-color: #dfdbe5;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-
-  
 }
 
-h2, h3, h4 {
-  font-family: 'Space Mono', monospace;
+h2,
+h3,
+h4 {
+  font-family: "Space Mono", monospace;
 }
 
-h2#pageTitle {
+.title {
   color: white;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2em;
 }
 
-/* div {
-  display: inline-block;
-  width: auto;
-  margin: .5em;
-  padding: .5em;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 3px;
-} */
+.convert {
+  text-align: center;
+  margin: 0 auto;
+}

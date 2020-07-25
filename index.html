@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>temp conversion</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Space+Mono"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>temp conversion</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Space+Mono" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-</head>
+  <body>
+    <header class="title">
+      <h2 id="pageTitle">convert between different temperature scales</h2>
+    </header>
+    <section class="convert">
+      <div id="setScale">
+        <h3>select conversion</h3>
+        convert from
+        <select id="selIn">
+          <option value="F">ºF</option>
+          <option value="C">ºC</option>
+        </select>
+        to
+        <select id="selOut">
+          <option value="C">ºC</option>
+          <option value="F">ºF</option>
+        </select>
+        <br />
+      </div>
+      <div id="input">
+        <h4>Temperature to convert?</h4>
+        <input id="tempIn" type="number" name="tempIn" />
+        <span id="inScale"></span>
+        <br />
+        <br />
+      </div>
+      <div id="output">
+        <button onclick="convert()">Convert</button>
+        <h4>is equivalent to</h4>
+        <span id="tempOut"></span> <span id="outScale"></span>
+      </div>
+    </section>
 
-<body>
-  <header>
-    <h2 id="pageTitle">convert between different temperature scales</h2>
-  </header>
-  <div id="setScale">
-    <h3>select conversion</h3>
-    convert from
-    <select id="selIn">
-      <option value="F">ºF</option>
-      <option value="C">ºC</option>
-    </select>
-    to
-    <select id="selOut">
-      <option value="C">ºC</option>
-      <option value="F">ºF</option>
-    </select>
-    <br>
-  </div>
-  <div id="input">
-    <h4>Temperature to convert?</h4>
-    <input id="tempIn" type="number" name="tempIn"> <span id="inScale"></span>
-    <br>
-    <br>
-  </div>
-  <div id="output">
-    <button onclick="convert()">Convert</button>
-    <h4>is equivalent to</h4>
-    <span id="tempOut"></span> <span id="outScale"></span>
-  </div>
-
-  <script src="./convert.js"></script>
-
-</body>
-
+    <script src="./convert.js"></script>
+  </body>
 </html>
