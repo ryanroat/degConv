@@ -7,8 +7,11 @@ inScale.innerText = `${selIn.value}º`;
 
 function convert() {
     const tempIn = document.getElementById('tempIn').value;
+    if (!tempIn) {
+        console.log('no temp input - returning');
+        return;
+    }
     let tempConv;
-
     inScale.innerText = `${selIn.value}º`;
     if (selIn.value == 'F') {
         tempConv = Math.round(((tempIn - 32) / 9) * 5);
@@ -25,4 +28,12 @@ selIn.addEventListener('change', () => {
     console.log('selIn change');
     selOut.value = selIn.value == 'F' ? 'C' : 'F';
     inScale.innerText = `${selIn.value}º`;
+    convert();
+});
+
+selOut.addEventListener('change', () => {
+    console.log('selOut change');
+    selIn.value = selOut.value == 'F' ? 'C' : 'F';
+    inScale.innerText = `${selIn.value}º`;
+    convert();
 });
